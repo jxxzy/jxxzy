@@ -220,6 +220,85 @@ These projects retain their upstream identities and licenses. Listing a fork doe
 
 [Browse all public repositories on GitHub →](https://github.com/jxxzy?tab=repositories)
 
+## Automatically updated repository index
+
+<!-- AUTO:PUBLIC-REPOSITORIES:START -->
+| Personal public repositories | NEXORAID public repositories |
+| :---: | :---: |
+| **51** | **4** |
+
+<details>
+<summary><b>Personal repositories (51)</b></summary>
+
+- [69SPEEDGACOR.github.io](https://github.com/jxxzy/69SPEEDGACOR.github.io)
+- [activate-sensorcore](https://github.com/jxxzy/activate-sensorcore)
+- [AI](https://github.com/jxxzy/AI)
+- [AI-TEJO](https://github.com/jxxzy/AI-TEJO)
+- [AintSaint.github.io](https://github.com/jxxzy/AintSaint.github.io)
+- [aistore](https://github.com/jxxzy/aistore)
+- [algoritima1](https://github.com/jxxzy/algoritima1)
+- [Alice3](https://github.com/jxxzy/Alice3)
+- [bengkelckmrt](https://github.com/jxxzy/bengkelckmrt)
+- [Bot-Js](https://github.com/jxxzy/Bot-Js)
+- [Chapter04](https://github.com/jxxzy/Chapter04)
+- [chapter1](https://github.com/jxxzy/chapter1)
+- [CHAT](https://github.com/jxxzy/CHAT)
+- [cl-iteung-bot-main](https://github.com/jxxzy/cl-iteung-bot-main)
+- [cyberoren](https://github.com/jxxzy/cyberoren)
+- [elainav6](https://github.com/jxxzy/elainav6)
+- [gcfbackend](https://github.com/jxxzy/gcfbackend)
+- [GETPOST](https://github.com/jxxzy/GETPOST)
+- [GIS-CHAPTER-3](https://github.com/jxxzy/GIS-CHAPTER-3)
+- [GIS-CHAPTER-5](https://github.com/jxxzy/GIS-CHAPTER-5)
+- [GIS-CHAPTER-9](https://github.com/jxxzy/GIS-CHAPTER-9)
+- [GIS-GEO-CHAPTER6](https://github.com/jxxzy/GIS-GEO-CHAPTER6)
+- [GIS-GOLANG](https://github.com/jxxzy/GIS-GOLANG)
+- [gis7](https://github.com/jxxzy/gis7)
+- [go-ethereum](https://github.com/jxxzy/go-ethereum)
+- [HyperBoostX](https://github.com/jxxzy/HyperBoostX)
+- [jsshn12](https://github.com/jxxzy/jsshn12)
+- [JXXZY](https://github.com/jxxzy/JXXZY)
+- [Jxxzy.github.io](https://github.com/jxxzy/Jxxzy.github.io)
+- [linux](https://github.com/jxxzy/linux)
+- [minio](https://github.com/jxxzy/minio)
+- [netpro-2026](https://github.com/jxxzy/netpro-2026)
+- [niia](https://github.com/jxxzy/niia)
+- [nlp](https://github.com/jxxzy/nlp)
+- [open-layer](https://github.com/jxxzy/open-layer)
+- [pbo-ll](https://github.com/jxxzy/pbo-ll)
+- [PowerPlatformConnectors](https://github.com/jxxzy/PowerPlatformConnectors)
+- [proposal-proyek3](https://github.com/jxxzy/proposal-proyek3)
+- [react-native-test-app](https://github.com/jxxzy/react-native-test-app)
+- [semantic-kernel](https://github.com/jxxzy/semantic-kernel)
+- [skeleton-geospasial-gis](https://github.com/jxxzy/skeleton-geospasial-gis)
+- [UASALGO](https://github.com/jxxzy/UASALGO)
+- [WA-BOT](https://github.com/jxxzy/WA-BOT)
+- [WA-BOT-MD](https://github.com/jxxzy/WA-BOT-MD)
+- [WA-CYBEROREN](https://github.com/jxxzy/WA-CYBEROREN)
+- [wajxxzybot-main](https://github.com/jxxzy/wajxxzybot-main)
+- [webhook](https://github.com/jxxzy/webhook)
+- [webhooks](https://github.com/jxxzy/webhooks)
+- [Whatsapp-BotChat-master](https://github.com/jxxzy/Whatsapp-BotChat-master)
+- [whatsapp-web.js-main](https://github.com/jxxzy/whatsapp-web.js-main)
+- [ws](https://github.com/jxxzy/ws)
+
+</details>
+
+<details>
+<summary><b>NEXORAID repositories (4)</b></summary>
+
+- [hypehostx](https://github.com/NEXORAID-ID/hypehostx)
+- [hyperboostx-v3](https://github.com/NEXORAID-ID/hyperboostx-v3)
+- [hyperboostx-v3-prototype](https://github.com/NEXORAID-ID/hyperboostx-v3-prototype)
+- [nexoraid-id.github.io](https://github.com/NEXORAID-ID/nexoraid-id.github.io)
+
+</details>
+
+<sub>Initial public inventory verified through GitHub on 26 November 2026. Automated refresh adds repository metadata.</sub>
+<!-- AUTO:PUBLIC-REPOSITORIES:END -->
+
+The original curated catalog above is retained as a historical snapshot. This separate index is maintained by [GitHub Actions](https://github.com/jxxzy/JXXZY/actions/workflows/update-profile.yml) using public repository metadata only. Forks retain upstream attribution; organization projects remain separate.
+
 ## Technology stack
 
 Technologies used or explored across personal, team and research projects. This is a working toolkit, not a claim of expert-level mastery in every technology.
