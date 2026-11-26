@@ -261,7 +261,7 @@ Public metadata from the GitHub REST API. Non-fork does not imply original autho
 | [go-ethereum](https://github.com/jxxzy/go-ethereum) | — | Fork | 0 | 2024-02-20 |
 | [HyperBoostX](https://github.com/jxxzy/HyperBoostX) | C\# | Non-fork | 1 | 2026-11-23 |
 | [jsshn12](https://github.com/jxxzy/jsshn12) | — | Non-fork | 0 | 2022-06-30 |
-| [JXXZY](https://github.com/jxxzy/mr.4nony) | Python | Non-fork | 1 | — |
+| [jxxzy](https://github.com/jxxzy/jxxzy) | Python | Non-fork | 1 | — |
 | [Jxxzy.github.io](https://github.com/jxxzy/Jxxzy.github.io) | HTML | Non-fork | 1 | 2026-11-19 |
 | [linux](https://github.com/jxxzy/linux) | — | Fork | 0 | 2024-02-19 |
 | [minio](https://github.com/jxxzy/minio) | — | Fork | 0 | 2024-02-20 |
@@ -300,7 +300,7 @@ Public metadata from the GitHub REST API. Non-fork does not imply original autho
 
 </details>
 
-<sub>Checked daily; commits are made only when the displayed data changes. The profile repository's push date is omitted to prevent self-triggered changes.</sub>
+<sub>Checked daily; commits are made only when the displayed data changes. This portfolio repository's push date is omitted to prevent self-triggered changes.</sub>
 <!-- AUTO:PUBLIC-REPOSITORIES:END -->
 
 The original curated catalog above is retained as a historical snapshot. This separate index is maintained by [GitHub Actions](https://github.com/jxxzy/mr.4nony/actions/workflows/update-profile.yml) using public repository metadata only. Forks retain upstream attribution; organization projects remain separate.
