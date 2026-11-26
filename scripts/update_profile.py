@@ -11,7 +11,7 @@ from urllib.request import Request, urlopen
 START = "<!-- AUTO:PUBLIC-REPOSITORIES:START -->"
 END = "<!-- AUTO:PUBLIC-REPOSITORIES:END -->"
 ROOT = Path(__file__).resolve().parents[1]
-PROFILE = "jxxzy/JXXZY"
+PORTFOLIO_REPO_ID = 760556898
 
 def fetch_public(owner, kind):
     result = {}
@@ -62,7 +62,7 @@ def catalog(title, repos):
             kind += " / Archived"
         pushed = r.get("pushed_at") or ""
         # Avoid self-triggered changes from this README's own automation commits.
-        date = "—" if r["full_name"].casefold() == PROFILE.casefold() else (pushed[:10] or "—")
+        date = "—" if r["id"] == PORTFOLIO_REPO_ID else (pushed[:10] or "—")
         rows.append(f"| {link(r)} | {cell(r.get('language'))} | {kind} | {int(r['stargazers_count'])} | {cell(date)} |")
     return "\n".join(rows + ["", "</details>"])
 
@@ -76,7 +76,7 @@ def render(personal, organization):
            "",
            catalog("Personal repositories", personal), "",
            catalog("NEXORAID repositories", organization), "",
-           "<sub>Checked daily; commits are made only when the displayed data changes. The profile repository's push date is omitted to prevent self-triggered changes.</sub>"]
+           "<sub>Checked daily; commits are made only when the displayed data changes. This portfolio repository's push date is omitted to prevent self-triggered changes.</sub>"]
     return "\n".join(top)
 
 def replace_index(original, generated):
@@ -101,7 +101,7 @@ def self_test():
         except ValueError:
             continue
         raise AssertionError("Malformed markers accepted")
-    fixture = dict(name="JXXZY", full_name=PROFILE, fork=False, archived=False,
+    fixture = dict(id=PORTFOLIO_REPO_ID, name="mr.4nony", full_name="jxxzy/mr.4nony", fork=False, archived=False,
                    language="Markdown", stargazers_count=0, pushed_at="2026-11-26T00:00:00Z")
     assert "2026-11-26" not in render([fixture], [fixture])
     assert "&#" in cell("<script>") or "&lt;" in cell("<script>")
