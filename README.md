@@ -8,10 +8,7 @@
 
 <img src="assets/terminal.svg" alt="Animated terminal: Windows optimization, full-stack development, automation, GIS and music" width="100%" />
 
-[![GitHub](https://img.shields.io/badge/GitHub-%40jxxzy-111827?style=for-the-badge&logo=github&logoColor=white)](https://github.com/jxxzy)
-[![NEXORAID](https://img.shields.io/badge/NEXORAID-Organization-4338ca?style=for-the-badge&logo=github&logoColor=white)](https://github.com/NEXORAID-ID)
-[![Portfolio](https://img.shields.io/badge/Portfolio-Website-0891b2?style=for-the-badge&logo=firefoxbrowser&logoColor=white)](https://jxxzy.github.io/)
-[![Location](https://img.shields.io/badge/Location-Indonesia-be123c?style=for-the-badge)](https://github.com/jxxzy)
+[GitHub](https://github.com/jxxzy) · [NEXORAID](https://github.com/NEXORAID-ID) · [Portfolio](https://jxxzy.github.io/) · Indonesia
 
 [About](#about-me) · [Flagship](#flagship-projects) · [Organization](#nexoraid-ecosystem) · [Live catalog](#repository-catalog) · [Stack](#technology-stack) · [Activity](#github-analytics) · [Contact](#connect)
 
@@ -39,15 +36,15 @@ My Windows optimization work started from a practical problem: many gaming commu
 
 ### HyperBoostX — Windows performance & control center
 
-[![Stars](https://img.shields.io/github/stars/jxxzy/HyperBoostX?style=flat-square&color=22d3ee)](https://github.com/jxxzy/HyperBoostX/stargazers) [![Last commit](https://img.shields.io/github/last-commit/jxxzy/HyperBoostX?style=flat-square&color=8b5cf6)](https://github.com/jxxzy/HyperBoostX/commits)
+[Stars](https://github.com/jxxzy/HyperBoostX/stargazers) · [Last commit](https://github.com/jxxzy/HyperBoostX/commits)
 
 | Track | Scope | Status |
 | :--- | :--- | :--- |
-| [HyperBoostX V1–V2](https://github.com/jxxzy/HyperBoostX) | Local diagnostics, gaming readiness, preview-first tuning, cleanup, restore workflows and safety guards | V2.10.0 documented as stable **unsigned** |
-| [HyperBoostX V3](https://github.com/NEXORAID-ID/hyperboostx-v3) | Native Windows desktop app, .NET, privileged-operation safety, rollback, diagnostics and release verification | Active development; stable gate not claimed complete |
+| [HyperBoostX legacy releases](https://github.com/jxxzy/HyperBoostX/releases) | Local diagnostics, gaming readiness, preview-first tuning, cleanup, restore workflows and safety guards | Legacy releases and archived versions; see release notes |
+| [HyperBoostX V3](https://github.com/jxxzy/HyperBoostX) | Native Windows desktop app, .NET, privileged-operation safety, rollback, diagnostics and release verification | Unsigned development build; Stable gate not passed |
 | [V3 interactive prototype](https://github.com/NEXORAID-ID/hyperboostx-v3-prototype) | Browser UI/UX reference with 73 modules, 14 navigation groups and simulated workflows | Design prototype, not a native optimizer |
 
-[Legacy releases](https://github.com/jxxzy/HyperBoostX/releases) · [V3 source](https://github.com/NEXORAID-ID/hyperboostx-v3) · [Try the prototype](https://nexoraid-id.github.io/hyperboostx-v3-prototype/)
+[Legacy releases](https://github.com/jxxzy/HyperBoostX/releases) · [V3 source](https://github.com/jxxzy/HyperBoostX) · [Release status](https://github.com/jxxzy/HyperBoostX/blob/main/RELEASE_STATUS.md) · [Try the prototype](https://nexoraid-id.github.io/hyperboostx-v3-prototype/)
 
 **Engineering principles:** no invented FPS or latency results, no unsupported feature claims, explicit previews and approvals, verified changes and recovery paths.
 
@@ -74,12 +71,12 @@ NEXORAID is my digital-service and software-development brand. Organization repo
 | :--- | :--- |
 | [hyperboostx-v3](https://github.com/NEXORAID-ID/hyperboostx-v3) | Native Windows optimizer/control center; development and verification in progress. |
 | [hyperboostx-v3-prototype](https://github.com/NEXORAID-ID/hyperboostx-v3-prototype) | Interactive browser-only specification and UI reference. |
-| [nexoraid-id.github.io](https://github.com/NEXORAID-ID/nexoraid-id.github.io) | Static multipage digital-service hub with catalog/search, comparison and Discord ticket links; no live payment backend. |
+| [nexoraid-id.github.io](https://github.com/NEXORAID-ID/nexoraid-id.github.io) | Digital-service platform; legacy static catalog and V4 development. See repository for current implementation and deployment status. |
 | [hypehostx](https://github.com/NEXORAID-ID/hypehostx) | Bilingual console homebrew reference portal incorporating credited upstream components; native hardware validation is not claimed. |
 
 [Organization profile](https://github.com/NEXORAID-ID) · [Digital service hub](https://nexoraid-id.github.io/)
 
-**Other product directions:** HYPEBOTX (Discord community automation, ticketing, moderation and AI routing) and provider/payment integrations remain product directions; this profile does not claim a separately verified public source repository or production deployment for them.
+**Other product directions:** HYPEBOTX covers Discord community automation, ticketing, moderation and AI routing. Deployment and provider/payment readiness are tracked separately; no public production-readiness claim is made here.
 
 ## Collaborative & academic work
 
@@ -122,7 +119,7 @@ Public metadata from the GitHub REST API. Non-fork does not imply original autho
 | [chapter1](https://github.com/jxxzy/chapter1) | JavaScript | 2026-11-19 | 0 |
 | [open-layer](https://github.com/jxxzy/open-layer) | JavaScript | 2026-11-19 | 0 |
 
-<details open>
+<details>
 <summary><b>Personal repositories (51)</b></summary>
 
 | Repository | Language | Type | Stars | Last push (UTC) |
@@ -181,7 +178,7 @@ Public metadata from the GitHub REST API. Non-fork does not imply original autho
 
 </details>
 
-<details open>
+<details>
 <summary><b>NEXORAID repositories (4)</b></summary>
 
 | Repository | Language | Type | Stars | Last push (UTC) |
@@ -193,7 +190,7 @@ Public metadata from the GitHub REST API. Non-fork does not imply original autho
 
 </details>
 
-<sub>Scheduled refresh every six hours; commits are made only when the displayed data changes. This portfolio repository's push date is omitted to prevent self-triggered changes.</sub>
+<sub>Scheduled refresh every six hours (GitHub may delay runs); commits are made only when the displayed data changes. This portfolio repository's push date is omitted to prevent self-triggered changes.</sub>
 <!-- AUTO:PUBLIC-REPOSITORIES:END -->
 
 The curated catalog below is retained as a historical snapshot. This separate index is maintained by [GitHub Actions](https://github.com/jxxzy/jxxzy/actions/workflows/update-profile.yml) using public repository metadata only. Forks retain upstream attribution; organization projects remain separate.
@@ -331,16 +328,6 @@ These projects retain their upstream identities and licenses. Listing a fork doe
 
 Technologies used or explored across personal, team and research projects. This is a working toolkit, not a claim of expert-level mastery in every technology.
 
-<div align="center">
-
-<img src="https://skillicons.dev/icons?i=cs,dotnet,js,ts,go,py,php,java,html,css,dart,flutter&perline=6&theme=dark" alt="Languages and platforms: C#, .NET, JavaScript, TypeScript, Go, Python, PHP, Java, HTML, CSS, Dart, Flutter" />
-
-<img src="https://skillicons.dev/icons?i=react,nextjs,vite,tailwind,bootstrap,nodejs,express,laravel,mysql,sqlite,git,github&perline=6&theme=dark" alt="Frameworks and data: React, Next.js, Vite, Tailwind, Bootstrap, Node.js, Express, Laravel, MySQL, SQLite, Git, GitHub" />
-
-<img src="https://skillicons.dev/icons?i=githubactions,docker,nginx,linux,windows,powershell,vscode,visualstudio,postman,figma&perline=5&theme=dark" alt="Engineering tools: GitHub Actions, Docker, Nginx, Linux, Windows, PowerShell, VS Code, Visual Studio, Postman, Figma" />
-
-</div>
-
 | Area | Tools & concepts |
 | :--- | :--- |
 | Desktop | C#, .NET, Windows, PowerShell, installer and portable packaging |
@@ -372,29 +359,11 @@ Projects differ in maturity. A prototype is not a finished product; a passing un
 
 <sub>Local analytics refresh with the repository catalog and work without third-party image services. Languages count public non-fork, non-archived repositories (excluding this profile), not lines of code or skill levels.</sub>
 
-<details>
-<summary><b>Additional live contribution cards (external providers)</b></summary>
+### Live GitHub activity
 
-<div align="center">
+[Contribution history](https://github.com/jxxzy) · [Repositories and stars](https://github.com/jxxzy?tab=repositories) · [Followers](https://github.com/jxxzy?tab=followers) · [Following](https://github.com/jxxzy?tab=following)
 
-<a href="https://github.com/jxxzy"><img src="https://github-readme-stats.vercel.app/api?username=jxxzy&amp;show_icons=true&amp;theme=tokyonight&amp;hide_border=true&amp;include_all_commits=true" alt="GitHub public activity statistics" width="48%" /></a>
-<a href="https://github.com/jxxzy"><img src="https://streak-stats.demolab.com?user=jxxzy&amp;theme=tokyonight&amp;hide_border=true" alt="GitHub contribution streak" width="48%" /></a>
-
-<img src="https://github-readme-stats.vercel.app/api/top-langs/?username=jxxzy&amp;theme=tokyonight&amp;hide_border=true&amp;layout=compact&amp;langs_count=10" alt="GitHub repository language breakdown" width="48%" />
-<img src="https://github-profile-summary-cards.vercel.app/api/cards/repos-per-language?username=jxxzy&amp;theme=tokyonight" alt="Repositories per language" width="48%" />
-
-<img src="https://github-profile-summary-cards.vercel.app/api/cards/profile-details?username=jxxzy&amp;theme=tokyonight" alt="GitHub contribution summary" width="100%" />
-<img src="https://github-readme-activity-graph.vercel.app/graph?username=jxxzy&amp;theme=tokyo-night&amp;hide_border=true&amp;area=true" alt="GitHub contribution activity graph" width="100%" />
-
-[![Followers](https://img.shields.io/github/followers/jxxzy?style=for-the-badge&amp;logo=github&amp;color=0891b2)](https://github.com/jxxzy?tab=followers)
-[![Stars](https://img.shields.io/github/stars/jxxzy?style=for-the-badge&amp;logo=github&amp;color=7c3aed)](https://github.com/jxxzy?tab=repositories)
-[![Profile visits](https://komarev.com/ghpvc/?username=jxxzy&amp;style=for-the-badge&amp;color=0891b2&amp;label=Profile+Views)](https://github.com/jxxzy)
-
-</div>
-
-</details>
-
-Optional contribution cards are generated by third-party services and may be cached, rate-limited or temporarily unavailable. Language distribution is not a proficiency score. The API-generated repository totals and recent activity in the [live catalog](#repository-catalog) remain available independently of these image providers. The native [GitHub contribution history](https://github.com/jxxzy) and [repositories](https://github.com/jxxzy?tab=repositories) remain the source of record.
+The native GitHub profile is the source of record for contribution activity. Repository counts, stars and language summaries above are generated locally from public API metadata, not from third-party cards that can return errors or stale images.
 
 ## Current focus
 
@@ -410,11 +379,7 @@ Optional contribution cards are generated by third-party services and may be cac
 
 <img src="assets/studio.svg" alt="Animated sound equalizer — JXXZY, Fun Fly Enjoy" width="100%" />
 
-[![GitHub](https://img.shields.io/badge/GitHub-Follow-181717?style=for-the-badge&logo=github&logoColor=white)](https://github.com/jxxzy)
-[![Instagram](https://img.shields.io/badge/Instagram-%40jxxzyshn-be185d?style=for-the-badge&logo=instagram&logoColor=white)](https://instagram.com/jxxzyshn)
-[![TikTok](https://img.shields.io/badge/TikTok-%40mr.4nony-111827?style=for-the-badge&logo=tiktok&logoColor=white)](https://www.tiktok.com/@mr.4nony)
-[![YouTube](https://img.shields.io/badge/YouTube-%40jxxzymix-b91c1c?style=for-the-badge&logo=youtube&logoColor=white)](https://www.youtube.com/@jxxzymix)
-[![Discord](https://img.shields.io/badge/Discord-Community-5865F2?style=for-the-badge&logo=discord&logoColor=white)](https://discord.gg/sBUA95rnFN)
+[GitHub](https://github.com/jxxzy) · [Instagram](https://instagram.com/jxxzyshn) · [TikTok](https://www.tiktok.com/@mr.4nony) · [YouTube](https://www.youtube.com/@jxxzymix) · [Discord](https://discord.gg/sBUA95rnFN)
 
 Open to discussing software projects, collaboration, automation and creative work.
 
@@ -424,4 +389,4 @@ Open to discussing software projects, collaboration, automation and creative wor
 
 <p align="center"><img src="assets/signal.svg" alt="" width="100%" /></p>
 
-<sub>Profile visuals are local animated SVG assets (decorative, not live system telemetry). External cards and badges are optional presentation layers. See each project's own README, release status and license for authoritative details.</sub>
+<sub>Profile visuals are local animated SVG assets (decorative, not live system telemetry). Badges are optional presentation layers; native links remain available. See each project's own README, release status and license for authoritative details.</sub>
