@@ -1,6 +1,8 @@
 #!/usr/bin/env python3
 """Keep visual features available through provider outages; never invent data."""
+import base64
 import concurrent.futures
+import os
 import html
 import json
 import re
@@ -19,8 +21,8 @@ MAX = 2_000_000
 ERROR = re.compile(r"rate limit|something went wrong|could not fetch|error fetching|application error|api error|maximum retries|could not resolve|service unavailable|bad gateway|an error occurred|invalid username|request failed|unable to fetch|no stats available", re.I)
 ALLOWED = {"github-readme-stats.vercel.app", "streak-stats.demolab.com", "github-profile-summary-cards.vercel.app", "github-readme-activity-graph.vercel.app", "skillicons.dev", "img.shields.io"}
 
-def normalize(body):
-    if len(body) > MAX or re.search(rb"<!DOCTYPE|<!ENTITY|<\?xml-stylesheet", body, re.I):
+def normalize(body, depth=0):
+    if depth > 2 or len(body) > MAX or re.search(rb"<!DOCTYPE|<!ENTITY|<\?xml-stylesheet", body, re.I):
         raise ValueError("unsafe or oversized response")
     root = ET.fromstring(body)
     if root.tag != "{" + NS + "}svg":
@@ -45,13 +47,20 @@ def normalize(body):
             raise ValueError("unsafe SVG element")
         for key, value in node.attrib.items():
             name = key.rsplit("}", 1)[-1].lower()
-            if name.startswith("on") or (name in ("href", "src") and not value.startswith("#")):
-                raise ValueError("external SVG reference")
+            if name.startswith("on"):
+                raise ValueError("unsafe SVG event handler")
+            if name in ("href", "src") and not value.startswith("#"):
+                if tag == "image" and value.startswith("data:image/svg+xml;base64,"):
+                    embedded = base64.b64decode(value.split(",", 1)[1], validate=True)
+                    safe = normalize(embedded, depth+1)
+                    node.set(key, "data:image/svg+xml;base64," + base64.b64encode(safe).decode("ascii"))
+                else:
+                    raise ValueError("external SVG reference")
             for target in re.findall(r"url\(#([^)]*)\)", value):
                 if target not in ids:
                     raise ValueError("missing SVG reference")
         css = (node.text or "") if tag == "style" else node.get("style", "")
-        if re.search(r"@import|url\s*\(\s*['\"]?(?!#)[^)]", css, re.I):
+        if re.search(r"@import", css, re.I) or any(not u.strip().strip("\"'").startswith("#") for u in re.findall(r"url\(([^)]*)\)", css, re.I)):
             raise ValueError("external CSS reference")
     return ET.tostring(root, encoding="utf-8") + b"\n"
 
@@ -82,6 +91,36 @@ def fetch(item):
             raise ValueError("unexpected content type")
         return normalize(response.read(MAX+1))
 
+def native_activity():
+    token = os.environ.get("GH_TOKEN")
+    if not token:
+        raise ValueError("GitHub token unavailable")
+    query = """query { user(login: "jxxzy") { contributionsCollection { contributionCalendar { totalContributions weeks { contributionDays { date contributionCount } } } } } }"""
+    request = Request("https://api.github.com/graphql", data=json.dumps({"query": query}).encode(), headers={"Authorization": "Bearer " + token, "Content-Type": "application/json", "User-Agent": "jxxzy-profile-cache"})
+    with urlopen(request, timeout=20) as response:
+        result = json.load(response)
+    if result.get("errors"):
+        raise ValueError("GitHub contribution query failed")
+    return render_activity(result["data"]["user"]["contributionsCollection"]["contributionCalendar"])
+
+def render_activity(calendar):
+    weeks = calendar["weeks"]
+    if not weeks or len(weeks) > 54:
+        raise ValueError("invalid contribution calendar")
+    days = [d for week in weeks for d in week["contributionDays"]]
+    if not days or any(not isinstance(d["contributionCount"], int) or d["contributionCount"] < 0 or not re.fullmatch(r"\d{4}-\d{2}-\d{2}", d["date"]) for d in days):
+        raise ValueError("invalid contribution values")
+    totals = [sum(d["contributionCount"] for d in week["contributionDays"]) for week in weeks]
+    total = int(calendar["totalContributions"])
+    if total != sum(totals):
+        raise ValueError("inconsistent contribution calendar")
+    maximum = max(1, *totals)
+    points = [(46 + 808*i/max(1,len(totals)-1), 181 - 112*v/maximum) for i,v in enumerate(totals)]
+    line = " ".join(f"{x:.1f},{y:.1f}" for x,y in points)
+    area = f"{points[0][0]:.1f},181 " + line + f" {points[-1][0]:.1f},181"
+    first, last = days[0]["date"], days[-1]["date"]
+    return normalize(f'<svg xmlns="{NS}" width="900" height="240" viewBox="0 0 900 240"><title>GitHub contribution activity graph</title><rect x="1" y="1" width="898" height="238" rx="12" fill="#1a1b26" stroke="#394b70"/><text x="30" y="32" font-family="sans-serif" font-size="20" fill="#7aa2f7" font-weight="bold">JXXZY / GitHub contribution activity</text><text x="30" y="54" font-family="sans-serif" font-size="13" fill="#c0caf5">{total} visible contributions · weekly totals · GitHub GraphQL</text><path d="M46 69 H854 M46 125 H854 M46 181 H854" stroke="#394b70" fill="none"/><polygon points="{area}" fill="#7aa2f7" opacity=".18"/><polyline points="{line}" stroke="#7aa2f7" stroke-width="2" fill="none" stroke-linejoin="round"/><text x="46" y="202" fill="#c0caf5" font-family="sans-serif" font-size="12">{first}</text><text x="854" y="202" text-anchor="end" fill="#c0caf5" font-family="sans-serif" font-size="12">{last}</text><text x="30" y="225" fill="#a9b1d6" font-family="sans-serif" font-size="11">Source: official GitHub contribution calendar · activity visible to the workflow token.</text></svg>'.encode())
+
 def read_state():
     path = CACHE / "status.json"
     return json.loads(path.read_text()) if path.exists() else {}
@@ -96,7 +135,15 @@ def refresh_one(item, previous):
         status = "verified"
     except Exception as exc:
         print("::warning::" + item["name"] + ": " + type(exc).__name__ + " " + str(exc)[:120])
-        if previous.get(item["name"]) in ("verified", "last-known-good") and path.exists():
+        native = None
+        if item["name"] == "activity-graph":
+            try:
+                native = native_activity()
+            except Exception as error:
+                print("::warning::native activity: " + type(error).__name__ + " " + str(error)[:100])
+        if native is not None:
+            body, status = native, "verified-github-native"
+        elif previous.get(item["name"]) in ("verified", "last-known-good", "verified-github-native") and path.exists():
             try:
                 body = normalize(path.read_bytes())
                 status = "last-known-good"
@@ -134,6 +181,11 @@ def main():
             raise AssertionError("invalid response accepted")
         for item in items:
             normalize(fallback(item))
+        embedded = base64.b64encode(valid).decode()
+        logo = f'<svg xmlns="{NS}" width="10" height="20"><image href="data:image/svg+xml;base64,{embedded}"/></svg>'.encode()
+        assert b"data:image/svg+xml;base64," in normalize(logo)
+        sample = {"totalContributions": 3, "weeks": [{"contributionDays": [{"date": "2026-01-01", "contributionCount": 3}]}]}
+        assert b"3 visible contributions" in render_activity(sample)
         print("Provider cache self-tests passed")
         return
     CACHE.mkdir(parents=True, exist_ok=True)

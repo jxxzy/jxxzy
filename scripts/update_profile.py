@@ -196,6 +196,10 @@ def validate_assets():
         path = (ROOT / asset).resolve()
         if ROOT / "assets" not in path.parents or not path.is_file():
             raise ValueError(f"Missing or invalid local asset: {asset}")
+        if path.parent.name == "provider-cache":
+            from cache_profile_images import normalize
+            normalize(path.read_bytes())
+            continue
         root = ET.parse(path).getroot()
         if root.tag != "{http://www.w3.org/2000/svg}svg" or not root.get("viewBox"):
             raise ValueError(f"Invalid SVG root/viewBox: {asset}")
