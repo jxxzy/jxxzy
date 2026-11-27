@@ -98,6 +98,20 @@ def recent_activity(personal, organization):
     return "\n".join(rows)
 
 
+def language_summary(personal, organization):
+    eligible = [r for r in personal + organization
+                if not r["fork"] and not r["archived"] and r["id"] != PORTFOLIO_REPO_ID]
+    counts = Counter(r.get("language") or "Unspecified" for r in eligible)
+    top = sorted(counts.items(), key=lambda item: (-item[1], item[0].casefold()))[:6]
+    rows = ["### Primary languages by repository count", "",
+            "| Language | Public repositories |", "| :--- | ---: |"]
+    rows.extend(f"| {cell(language)} | {count} |" for language, count in top)
+    if not top:
+        rows.append("| — | 0 |")
+    rows.extend(["", "Counts public non-fork, non-archived repositories, excluding this profile. Not a measure of skill or lines of code."])
+    return "\n".join(rows)
+
+
 def render(personal, organization):
     forks = sum(bool(r["fork"]) for r in personal)
     top = ["| Personal public | Personal non-fork | Personal forks | NEXORAID public |",
@@ -107,6 +121,7 @@ def render(personal, organization):
            "Public metadata from the GitHub REST API. Non-fork does not imply original authorship.",
            "",
            f"**Public repository stars:** {sum(int(r['stargazers_count']) for r in personal)} personal · {sum(int(r['stargazers_count']) for r in organization)} NEXORAID (including forks).", "",
+           language_summary(personal, organization), "",
            recent_activity(personal, organization), "",
            catalog("Personal repositories", personal), "",
            catalog("NEXORAID repositories", organization), "",
@@ -163,6 +178,12 @@ def validate_assets():
         if anchor not in headings:
             raise ValueError(f"Missing README anchor: {anchor}")
     assets = set(re.findall(r'<img src="(assets/[^"]+)"', readme))
+    assets.update(re.findall(r'!\[[^\]]*\]\((assets/[^)]+)\)', readme))
+    for link in re.findall(r'\]\((docs/[^)#]+)(?:#[^)]*)?\)', readme):
+        if not (ROOT / link).is_file():
+            raise ValueError(f"Missing local documentation: {link}")
+    if not readme.startswith("# ") or "<div" in readme or "<details open" in readme:
+        raise ValueError("Profile must use a native heading and collapsed optional sections")
     if not assets:
         raise ValueError("No local SVG assets referenced")
     for asset in sorted(assets):
@@ -197,7 +218,7 @@ def probe_external():
     # command remains supported; validate the profile rather than reporting a
     # misleading success when a third-party provider serves an error image.
     validate_assets()
-    print("No third-party contribution card dependencies; native GitHub workflow badges remain.")
+    print("No third-party image dependencies; profile content has native Markdown fallbacks.")
 
 
 def replace_index(original, generated):
@@ -235,6 +256,8 @@ def self_test():
     rendered = render([fixture, project, fork], [])
     assert "**3** | **2** | **1** | **0**" in rendered
     assert "<details>" in rendered and "Public repository stars" in rendered
+    assert "Primary languages by repository count" in rendered
+    assert "| Markdown | 1 |" in rendered
     assert replace_index(replace_index(original, rendered), rendered) == replace_index(original, rendered)
     svg = analytics_svg([fixture, project, fork, archived], [])
     assert ET.fromstring(svg).tag.endswith("svg")
