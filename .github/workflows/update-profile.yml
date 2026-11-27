@@ -10,6 +10,7 @@ on:
       - '.github/workflows/update-profile.yml'
       - 'scripts/update_profile.py'
       - 'README.md'
+      - 'assets/**'
 
 permissions:
   contents: write
@@ -44,12 +45,13 @@ jobs:
             git reset --hard origin/main
             python3 scripts/update_profile.py --self-test
             python3 scripts/update_profile.py
-            if git diff --quiet -- README.md; then
-              echo 'No README changes'
+            python3 scripts/update_profile.py --check-assets
+            if [[ -z "$(git status --porcelain -- README.md assets/profile-analytics.svg)" ]]; then
+              echo 'No generated changes'
               exit 0
             fi
-            git add -- README.md
-            git commit -m 'docs: refresh public repository index'
+            git add -- README.md assets/profile-analytics.svg
+            git commit -m 'docs: refresh public profile analytics'
             if git push origin HEAD:main; then
               exit 0
             fi
@@ -57,3 +59,5 @@ jobs:
           done
           echo 'Unable to publish after three attempts' >&2
           exit 1
+      - name: Check optional external contribution cards
+        run: python3 scripts/update_profile.py --probe-external
