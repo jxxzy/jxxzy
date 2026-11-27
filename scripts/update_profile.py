@@ -5,6 +5,8 @@ import json
 import os
 import re
 import sys
+import time
+from urllib.error import HTTPError, URLError
 from pathlib import Path
 from urllib.request import Request, urlopen
 
@@ -12,6 +14,20 @@ START = "<!-- AUTO:PUBLIC-REPOSITORIES:START -->"
 END = "<!-- AUTO:PUBLIC-REPOSITORIES:END -->"
 ROOT = Path(__file__).resolve().parents[1]
 PORTFOLIO_REPO_ID = 760556898
+
+def request_json(url, headers):
+    for attempt in range(3):
+        try:
+            with urlopen(Request(url, headers=headers), timeout=30) as response:
+                return json.load(response)
+        except HTTPError as exc:
+            if exc.code not in (429, 500, 502, 503, 504) or attempt == 2:
+                raise
+        except (URLError, TimeoutError):
+            if attempt == 2:
+                raise
+        time.sleep(2 ** attempt)
+
 
 def fetch_public(owner, kind):
     result = {}
@@ -24,8 +40,7 @@ def fetch_public(owner, kind):
                    "User-Agent": "jxxzy-profile-refresh"}
         if os.environ.get("GH_TOKEN"):
             headers["Authorization"] = "Bearer " + os.environ["GH_TOKEN"]
-        with urlopen(Request(url, headers=headers), timeout=30) as response:
-            batch = json.load(response)
+        batch = request_json(url, headers)
         if not isinstance(batch, list):
             raise ValueError("Unexpected API response")
         for repo in batch:
@@ -53,7 +68,7 @@ def link(repo):
     return f"[{cell(repo['name'])}](https://github.com/{full_name})"
 
 def catalog(title, repos):
-    rows = ["<details>", f"<summary><b>{title} ({len(repos)})</b></summary>", "",
+    rows = ["<details open>", f"<summary><b>{title} ({len(repos)})</b></summary>", "",
             "| Repository | Language | Type | Stars | Last push (UTC) |",
             "| :--- | :--- | :--- | ---: | :--- |"]
     for r in repos:
@@ -66,6 +81,21 @@ def catalog(title, repos):
         rows.append(f"| {link(r)} | {cell(r.get('language'))} | {kind} | {int(r['stargazers_count'])} | {cell(date)} |")
     return "\n".join(rows + ["", "</details>"])
 
+def recent_activity(personal, organization):
+    eligible = [r for r in personal + organization
+                if not r["fork"] and not r["archived"]
+                and r["id"] != PORTFOLIO_REPO_ID and r.get("pushed_at")]
+    recent = sorted(eligible, key=lambda r: (r["pushed_at"], r["full_name"].casefold()), reverse=True)[:8]
+    rows = ["### Recently pushed public projects", "",
+            "| Repository | Language | Last push (UTC) | Stars |",
+            "| :--- | :--- | :--- | ---: |"]
+    for r in recent:
+        rows.append(f"| {link(r)} | {cell(r.get('language'))} | {cell(r['pushed_at'][:10])} | {int(r['stargazers_count'])} |")
+    if not recent:
+        rows.append("| — | — | — | — |")
+    return "\n".join(rows)
+
+
 def render(personal, organization):
     forks = sum(bool(r["fork"]) for r in personal)
     top = ["| Personal public | Personal non-fork | Personal forks | NEXORAID public |",
@@ -74,9 +104,11 @@ def render(personal, organization):
            "",
            "Public metadata from the GitHub REST API. Non-fork does not imply original authorship.",
            "",
+           f"**Public repository stars:** {sum(int(r['stargazers_count']) for r in personal)} personal · {sum(int(r['stargazers_count']) for r in organization)} NEXORAID (including forks).", "",
+           recent_activity(personal, organization), "",
            catalog("Personal repositories", personal), "",
            catalog("NEXORAID repositories", organization), "",
-           "<sub>Checked daily; commits are made only when the displayed data changes. This portfolio repository's push date is omitted to prevent self-triggered changes.</sub>"]
+           "<sub>Scheduled refresh every six hours; commits are made only when the displayed data changes. This portfolio repository's push date is omitted to prevent self-triggered changes.</sub>"]
     return "\n".join(top)
 
 def replace_index(original, generated):
@@ -101,10 +133,20 @@ def self_test():
         except ValueError:
             continue
         raise AssertionError("Malformed markers accepted")
-    fixture = dict(id=PORTFOLIO_REPO_ID, name="mr.4nony", full_name="jxxzy/mr.4nony", fork=False, archived=False,
+    fixture = dict(id=PORTFOLIO_REPO_ID, name="jxxzy", full_name="jxxzy/jxxzy", fork=False, archived=False,
                    language="Markdown", stargazers_count=0, pushed_at="2026-11-26T00:00:00Z")
     assert "2026-11-26" not in render([fixture], [fixture])
     assert "&#" in cell("<script>") or "&lt;" in cell("<script>")
+    project = dict(fixture, id=123, name="example", full_name="jxxzy/example", stargazers_count=4)
+    fork = dict(project, id=124, name="fork", full_name="jxxzy/fork", fork=True)
+    archived = dict(project, id=125, name="archive", full_name="jxxzy/archive", archived=True)
+    recent = recent_activity([fixture, project, fork, archived], [])
+    assert "jxxzy/example" in recent
+    assert "jxxzy/jxxzy)" not in recent and "jxxzy/fork" not in recent and "jxxzy/archive" not in recent
+    rendered = render([fixture, project, fork], [])
+    assert "**3** | **2** | **1** | **0**" in rendered
+    assert "<details open>" in rendered and "Public repository stars" in rendered
+    assert replace_index(replace_index(original, rendered), rendered) == replace_index(original, rendered)
     print("Self-test passed")
 
 def main():

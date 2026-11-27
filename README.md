@@ -13,7 +13,7 @@
 [![Portfolio](https://img.shields.io/badge/Portfolio-Website-0891b2?style=for-the-badge&logo=firefoxbrowser&logoColor=white)](https://jxxzy.github.io/)
 [![Location](https://img.shields.io/badge/Location-Indonesia-be123c?style=for-the-badge)](https://github.com/jxxzy)
 
-[About](#about-me) · [Flagship](#flagship-projects) · [Organization](#nexoraid-ecosystem) · [Catalog](#repository-catalog) · [Stack](#technology-stack) · [Activity](#github-analytics) · [Contact](#connect)
+[About](#about-me) · [Flagship](#flagship-projects) · [Organization](#nexoraid-ecosystem) · [Live catalog](#repository-catalog) · [Stack](#technology-stack) · [Activity](#github-analytics) · [Contact](#connect)
 
 </div>
 
@@ -98,6 +98,93 @@ A collaborative Flutter/Dart application for GPS coordinates, elevation, offline
 
 ## Repository catalog
 
+[![Profile refresh](https://github.com/jxxzy/jxxzy/actions/workflows/update-profile.yml/badge.svg?branch=main)](https://github.com/jxxzy/jxxzy/actions/workflows/update-profile.yml) · [Run history](https://github.com/jxxzy/jxxzy/actions/workflows/update-profile.yml) · [Historical catalog](#historical-repository-catalog)
+
+<!-- AUTO:PUBLIC-REPOSITORIES:START -->
+| Personal public | Personal non-fork | Personal forks | NEXORAID public |
+| :---: | :---: | :---: | :---: |
+| **51** | **35** | **16** | **4** |
+
+Public metadata from the GitHub REST API. Non-fork does not imply original authorship.
+
+<details open>
+<summary><b>Personal repositories (51)</b></summary>
+
+| Repository | Language | Type | Stars | Last push (UTC) |
+| :--- | :--- | :--- | ---: | :--- |
+| [69SPEEDGACOR.github.io](https://github.com/jxxzy/69SPEEDGACOR.github.io) | HTML | Non-fork | 0 | 2024-04-08 |
+| [activate-sensorcore](https://github.com/jxxzy/activate-sensorcore) | — | Fork | 0 | 2014-11-27 |
+| [AI](https://github.com/jxxzy/AI) | — | Fork | 0 | 2024-01-19 |
+| [AI-TEJO](https://github.com/jxxzy/AI-TEJO) | JavaScript | Non-fork | 0 | 2024-03-05 |
+| [AintSaint.github.io](https://github.com/jxxzy/AintSaint.github.io) | HTML | Non-fork | 0 | 2026-07-04 |
+| [aistore](https://github.com/jxxzy/aistore) | — | Fork | 0 | 2024-02-19 |
+| [algoritima1](https://github.com/jxxzy/algoritima1) | JavaScript | Non-fork | 1 | 2026-11-19 |
+| [Alice3](https://github.com/jxxzy/Alice3) | — | Non-fork | 0 | 2024-10-31 |
+| [bengkelckmrt](https://github.com/jxxzy/bengkelckmrt) | JavaScript | Non-fork | 0 | 2024-11-12 |
+| [Bot-Js](https://github.com/jxxzy/Bot-Js) | HTML | Non-fork | 0 | 2023-01-17 |
+| [Chapter04](https://github.com/jxxzy/Chapter04) | JavaScript | Non-fork | 0 | 2026-11-19 |
+| [chapter1](https://github.com/jxxzy/chapter1) | JavaScript | Non-fork | 0 | 2026-11-19 |
+| [CHAT](https://github.com/jxxzy/CHAT) | — | Fork | 0 | 2024-02-19 |
+| [cl-iteung-bot-main](https://github.com/jxxzy/cl-iteung-bot-main) | JavaScript | Non-fork | 0 | 2023-01-17 |
+| [cyberoren](https://github.com/jxxzy/cyberoren) | JavaScript | Non-fork | 0 | 2022-06-30 |
+| [elainav6](https://github.com/jxxzy/elainav6) | — | Fork | 0 | 2022-11-29 |
+| [gcfbackend](https://github.com/jxxzy/gcfbackend) | Go | Non-fork | 0 | 2026-11-20 |
+| [GETPOST](https://github.com/jxxzy/GETPOST) | JavaScript | Non-fork | 0 | 2026-11-19 |
+| [GIS-CHAPTER-3](https://github.com/jxxzy/GIS-CHAPTER-3) | JavaScript | Non-fork | 0 | 2024-02-07 |
+| [GIS-CHAPTER-5](https://github.com/jxxzy/GIS-CHAPTER-5) | JavaScript | Non-fork | 0 | 2026-11-19 |
+| [GIS-CHAPTER-9](https://github.com/jxxzy/GIS-CHAPTER-9) | — | Non-fork | 0 | 2023-12-01 |
+| [GIS-GEO-CHAPTER6](https://github.com/jxxzy/GIS-GEO-CHAPTER6) | — | Non-fork | 0 | 2023-11-03 |
+| [GIS-GOLANG](https://github.com/jxxzy/GIS-GOLANG) | Go | Non-fork | 0 | 2024-02-19 |
+| [gis7](https://github.com/jxxzy/gis7) | — | Non-fork | 0 | 2023-11-10 |
+| [go-ethereum](https://github.com/jxxzy/go-ethereum) | — | Fork | 0 | 2024-02-20 |
+| [HyperBoostX](https://github.com/jxxzy/HyperBoostX) | C\# | Non-fork | 1 | 2026-11-23 |
+| [jsshn12](https://github.com/jxxzy/jsshn12) | — | Non-fork | 0 | 2022-06-30 |
+| [jxxzy](https://github.com/jxxzy/jxxzy) | Python | Non-fork | 1 | — |
+| [Jxxzy.github.io](https://github.com/jxxzy/Jxxzy.github.io) | HTML | Non-fork | 1 | 2026-11-19 |
+| [linux](https://github.com/jxxzy/linux) | — | Fork | 0 | 2024-02-19 |
+| [minio](https://github.com/jxxzy/minio) | — | Fork | 0 | 2024-02-20 |
+| [netpro-2026](https://github.com/jxxzy/netpro-2026) | Python | Non-fork | 0 | 2026-11-26 |
+| [niia](https://github.com/jxxzy/niia) | Python | Fork | 0 | 2026-11-20 |
+| [nlp](https://github.com/jxxzy/nlp) | Python | Fork | 0 | 2026-11-19 |
+| [open-layer](https://github.com/jxxzy/open-layer) | JavaScript | Non-fork | 0 | 2026-11-19 |
+| [pbo-ll](https://github.com/jxxzy/pbo-ll) | JavaScript | Non-fork | 1 | 2026-11-19 |
+| [PowerPlatformConnectors](https://github.com/jxxzy/PowerPlatformConnectors) | — | Fork | 0 | 2024-02-20 |
+| [proposal-proyek3](https://github.com/jxxzy/proposal-proyek3) | CSS | Non-fork | 0 | 2026-11-20 |
+| [react-native-test-app](https://github.com/jxxzy/react-native-test-app) | — | Fork | 0 | 2024-02-20 |
+| [semantic-kernel](https://github.com/jxxzy/semantic-kernel) | — | Fork | 0 | 2024-02-20 |
+| [skeleton-geospasial-gis](https://github.com/jxxzy/skeleton-geospasial-gis) | JavaScript | Non-fork | 1 | 2026-11-19 |
+| [UASALGO](https://github.com/jxxzy/UASALGO) | Java | Non-fork | 0 | 2022-08-09 |
+| [WA-BOT](https://github.com/jxxzy/WA-BOT) | JavaScript | Non-fork | 0 | 2023-11-14 |
+| [WA-BOT-MD](https://github.com/jxxzy/WA-BOT-MD) | JavaScript | Non-fork | 0 | 2023-11-14 |
+| [WA-CYBEROREN](https://github.com/jxxzy/WA-CYBEROREN) | — | Fork | 0 | 2023-11-06 |
+| [wajxxzybot-main](https://github.com/jxxzy/wajxxzybot-main) | JavaScript | Non-fork | 0 | 2023-01-17 |
+| [webhook](https://github.com/jxxzy/webhook) | Go | Non-fork | 0 | 2023-11-17 |
+| [webhooks](https://github.com/jxxzy/webhooks) | PHP | Fork | 0 | 2023-11-17 |
+| [Whatsapp-BotChat-master](https://github.com/jxxzy/Whatsapp-BotChat-master) | Python | Non-fork | 0 | 2023-01-17 |
+| [whatsapp-web.js-main](https://github.com/jxxzy/whatsapp-web.js-main) | JavaScript | Non-fork | 0 | 2023-01-17 |
+| [ws](https://github.com/jxxzy/ws) | HTML | Fork | 0 | 2023-02-20 |
+
+</details>
+
+<details open>
+<summary><b>NEXORAID repositories (4)</b></summary>
+
+| Repository | Language | Type | Stars | Last push (UTC) |
+| :--- | :--- | :--- | ---: | :--- |
+| [hypehostx](https://github.com/NEXORAID-ID/hypehostx) | HTML | Non-fork | 0 | 2026-11-15 |
+| [hyperboostx-v3](https://github.com/NEXORAID-ID/hyperboostx-v3) | C\# | Non-fork | 0 | 2026-11-16 |
+| [hyperboostx-v3-prototype](https://github.com/NEXORAID-ID/hyperboostx-v3-prototype) | HTML | Non-fork | 1 | 2026-11-17 |
+| [nexoraid-id.github.io](https://github.com/NEXORAID-ID/nexoraid-id.github.io) | JavaScript | Non-fork | 0 | 2026-11-26 |
+
+</details>
+
+<sub>Scheduled refresh every six hours; commits are made only when the displayed data changes. This portfolio repository's push date is omitted to prevent self-triggered changes.</sub>
+<!-- AUTO:PUBLIC-REPOSITORIES:END -->
+
+The curated catalog below is retained as a historical snapshot. This separate index is maintained by [GitHub Actions](https://github.com/jxxzy/jxxzy/actions/workflows/update-profile.yml) using public repository metadata only. Forks retain upstream attribution; organization projects remain separate.
+
+## Historical repository catalog
+
 <div align="center">
 
 | Personal public repositories | Non-fork repositories | GitHub-marked forks | NEXORAID public repositories |
@@ -108,9 +195,9 @@ A collaborative Flutter/Dart application for GPS coordinates, elevation, offline
 
 </div>
 
-All 50 public personal repositories are listed below. Non-fork is GitHub metadata, **not** proof of original authorship; imported code and learning projects may contain upstream material. Languages reflect GitHub's primary language where available, with Markdown/SVG noted for this profile. A dash indicates no reported primary language.
+This historical catalog preserves the 19 November 2026 snapshot; use the live index above for current counts and repositories. The 50 public personal repositories recorded at that time are listed below. Non-fork is GitHub metadata, **not** proof of original authorship; imported code and learning projects may contain upstream material. Languages reflect GitHub's primary language where available, with Markdown/SVG noted for this profile. A dash indicates no reported primary language.
 
-<details open>
+<details>
 <summary><b>Flagship & product projects (4)</b></summary>
 
 | Repository | Main language | Scope |
@@ -129,7 +216,7 @@ All 50 public personal repositories are listed below. Non-fork is GitHub metadat
 | :--- | :--- | :--- |
 | [Jxxzy.github.io](https://github.com/jxxzy/Jxxzy.github.io) | HTML | Personal GitHub Pages website. |
 | [69SPEEDGACOR.github.io](https://github.com/jxxzy/69SPEEDGACOR.github.io) | HTML | Static website project. |
-| [mr.4nony](https://github.com/jxxzy/mr.4nony) | Markdown / SVG | This animated portfolio (formerly JXXZY). |
+| [mr.4nony](https://github.com/jxxzy/mr.4nony) | Markdown / SVG | Earlier portfolio repository name at the time of the snapshot. |
 | [jsshn12](https://github.com/jxxzy/jsshn12) | — | Legacy GitHub profile configuration. |
 
 </details>
@@ -220,91 +307,6 @@ These projects retain their upstream identities and licenses. Listing a fork doe
 
 [Browse all public repositories on GitHub →](https://github.com/jxxzy?tab=repositories)
 
-## Automatically updated repository index
-
-<!-- AUTO:PUBLIC-REPOSITORIES:START -->
-| Personal public | Personal non-fork | Personal forks | NEXORAID public |
-| :---: | :---: | :---: | :---: |
-| **51** | **35** | **16** | **4** |
-
-Public metadata from the GitHub REST API. Non-fork does not imply original authorship.
-
-<details>
-<summary><b>Personal repositories (51)</b></summary>
-
-| Repository | Language | Type | Stars | Last push (UTC) |
-| :--- | :--- | :--- | ---: | :--- |
-| [69SPEEDGACOR.github.io](https://github.com/jxxzy/69SPEEDGACOR.github.io) | HTML | Non-fork | 0 | 2024-04-08 |
-| [activate-sensorcore](https://github.com/jxxzy/activate-sensorcore) | — | Fork | 0 | 2014-11-27 |
-| [AI](https://github.com/jxxzy/AI) | — | Fork | 0 | 2024-01-19 |
-| [AI-TEJO](https://github.com/jxxzy/AI-TEJO) | JavaScript | Non-fork | 0 | 2024-03-05 |
-| [AintSaint.github.io](https://github.com/jxxzy/AintSaint.github.io) | HTML | Non-fork | 0 | 2026-07-04 |
-| [aistore](https://github.com/jxxzy/aistore) | — | Fork | 0 | 2024-02-19 |
-| [algoritima1](https://github.com/jxxzy/algoritima1) | JavaScript | Non-fork | 1 | 2026-11-19 |
-| [Alice3](https://github.com/jxxzy/Alice3) | — | Non-fork | 0 | 2024-10-31 |
-| [bengkelckmrt](https://github.com/jxxzy/bengkelckmrt) | JavaScript | Non-fork | 0 | 2024-11-12 |
-| [Bot-Js](https://github.com/jxxzy/Bot-Js) | HTML | Non-fork | 0 | 2023-01-17 |
-| [Chapter04](https://github.com/jxxzy/Chapter04) | JavaScript | Non-fork | 0 | 2026-11-19 |
-| [chapter1](https://github.com/jxxzy/chapter1) | JavaScript | Non-fork | 0 | 2026-11-19 |
-| [CHAT](https://github.com/jxxzy/CHAT) | — | Fork | 0 | 2024-02-19 |
-| [cl-iteung-bot-main](https://github.com/jxxzy/cl-iteung-bot-main) | JavaScript | Non-fork | 0 | 2023-01-17 |
-| [cyberoren](https://github.com/jxxzy/cyberoren) | JavaScript | Non-fork | 0 | 2022-06-30 |
-| [elainav6](https://github.com/jxxzy/elainav6) | — | Fork | 0 | 2022-11-29 |
-| [gcfbackend](https://github.com/jxxzy/gcfbackend) | Go | Non-fork | 0 | 2026-11-20 |
-| [GETPOST](https://github.com/jxxzy/GETPOST) | JavaScript | Non-fork | 0 | 2026-11-19 |
-| [GIS-CHAPTER-3](https://github.com/jxxzy/GIS-CHAPTER-3) | JavaScript | Non-fork | 0 | 2024-02-07 |
-| [GIS-CHAPTER-5](https://github.com/jxxzy/GIS-CHAPTER-5) | JavaScript | Non-fork | 0 | 2026-11-19 |
-| [GIS-CHAPTER-9](https://github.com/jxxzy/GIS-CHAPTER-9) | — | Non-fork | 0 | 2023-12-01 |
-| [GIS-GEO-CHAPTER6](https://github.com/jxxzy/GIS-GEO-CHAPTER6) | — | Non-fork | 0 | 2023-11-03 |
-| [GIS-GOLANG](https://github.com/jxxzy/GIS-GOLANG) | Go | Non-fork | 0 | 2024-02-19 |
-| [gis7](https://github.com/jxxzy/gis7) | — | Non-fork | 0 | 2023-11-10 |
-| [go-ethereum](https://github.com/jxxzy/go-ethereum) | — | Fork | 0 | 2024-02-20 |
-| [HyperBoostX](https://github.com/jxxzy/HyperBoostX) | C\# | Non-fork | 1 | 2026-11-23 |
-| [jsshn12](https://github.com/jxxzy/jsshn12) | — | Non-fork | 0 | 2022-06-30 |
-| [jxxzy](https://github.com/jxxzy/jxxzy) | Python | Non-fork | 1 | — |
-| [Jxxzy.github.io](https://github.com/jxxzy/Jxxzy.github.io) | HTML | Non-fork | 1 | 2026-11-19 |
-| [linux](https://github.com/jxxzy/linux) | — | Fork | 0 | 2024-02-19 |
-| [minio](https://github.com/jxxzy/minio) | — | Fork | 0 | 2024-02-20 |
-| [netpro-2026](https://github.com/jxxzy/netpro-2026) | Python | Non-fork | 0 | 2026-11-26 |
-| [niia](https://github.com/jxxzy/niia) | Python | Fork | 0 | 2026-11-20 |
-| [nlp](https://github.com/jxxzy/nlp) | Python | Fork | 0 | 2026-11-19 |
-| [open-layer](https://github.com/jxxzy/open-layer) | JavaScript | Non-fork | 0 | 2026-11-19 |
-| [pbo-ll](https://github.com/jxxzy/pbo-ll) | JavaScript | Non-fork | 1 | 2026-11-19 |
-| [PowerPlatformConnectors](https://github.com/jxxzy/PowerPlatformConnectors) | — | Fork | 0 | 2024-02-20 |
-| [proposal-proyek3](https://github.com/jxxzy/proposal-proyek3) | CSS | Non-fork | 0 | 2026-11-20 |
-| [react-native-test-app](https://github.com/jxxzy/react-native-test-app) | — | Fork | 0 | 2024-02-20 |
-| [semantic-kernel](https://github.com/jxxzy/semantic-kernel) | — | Fork | 0 | 2024-02-20 |
-| [skeleton-geospasial-gis](https://github.com/jxxzy/skeleton-geospasial-gis) | JavaScript | Non-fork | 1 | 2026-11-19 |
-| [UASALGO](https://github.com/jxxzy/UASALGO) | Java | Non-fork | 0 | 2022-08-09 |
-| [WA-BOT](https://github.com/jxxzy/WA-BOT) | JavaScript | Non-fork | 0 | 2023-11-14 |
-| [WA-BOT-MD](https://github.com/jxxzy/WA-BOT-MD) | JavaScript | Non-fork | 0 | 2023-11-14 |
-| [WA-CYBEROREN](https://github.com/jxxzy/WA-CYBEROREN) | — | Fork | 0 | 2023-11-06 |
-| [wajxxzybot-main](https://github.com/jxxzy/wajxxzybot-main) | JavaScript | Non-fork | 0 | 2023-01-17 |
-| [webhook](https://github.com/jxxzy/webhook) | Go | Non-fork | 0 | 2023-11-17 |
-| [webhooks](https://github.com/jxxzy/webhooks) | PHP | Fork | 0 | 2023-11-17 |
-| [Whatsapp-BotChat-master](https://github.com/jxxzy/Whatsapp-BotChat-master) | Python | Non-fork | 0 | 2023-01-17 |
-| [whatsapp-web.js-main](https://github.com/jxxzy/whatsapp-web.js-main) | JavaScript | Non-fork | 0 | 2023-01-17 |
-| [ws](https://github.com/jxxzy/ws) | HTML | Fork | 0 | 2023-02-20 |
-
-</details>
-
-<details>
-<summary><b>NEXORAID repositories (4)</b></summary>
-
-| Repository | Language | Type | Stars | Last push (UTC) |
-| :--- | :--- | :--- | ---: | :--- |
-| [hypehostx](https://github.com/NEXORAID-ID/hypehostx) | HTML | Non-fork | 0 | 2026-11-15 |
-| [hyperboostx-v3](https://github.com/NEXORAID-ID/hyperboostx-v3) | C\# | Non-fork | 0 | 2026-11-16 |
-| [hyperboostx-v3-prototype](https://github.com/NEXORAID-ID/hyperboostx-v3-prototype) | HTML | Non-fork | 1 | 2026-11-17 |
-| [nexoraid-id.github.io](https://github.com/NEXORAID-ID/nexoraid-id.github.io) | JavaScript | Non-fork | 0 | 2026-11-26 |
-
-</details>
-
-<sub>Checked daily; commits are made only when the displayed data changes. This portfolio repository's push date is omitted to prevent self-triggered changes.</sub>
-<!-- AUTO:PUBLIC-REPOSITORIES:END -->
-
-The original curated catalog above is retained as a historical snapshot. This separate index is maintained by [GitHub Actions](https://github.com/jxxzy/mr.4nony/actions/workflows/update-profile.yml) using public repository metadata only. Forks retain upstream attribution; organization projects remain separate.
-
 ## Technology stack
 
 Technologies used or explored across personal, team and research projects. This is a working toolkit, not a claim of expert-level mastery in every technology.
@@ -359,7 +361,7 @@ Projects differ in maturity. A prototype is not a finished product; a passing un
 
 </div>
 
-Statistics are generated by third-party services and may be cached, rate-limited or temporarily unavailable. Language distribution is not a proficiency score. The native [GitHub contribution history](https://github.com/jxxzy) and [repositories](https://github.com/jxxzy?tab=repositories) remain the source of record.
+Statistics are generated by third-party services and may be cached, rate-limited or temporarily unavailable. Language distribution is not a proficiency score. The API-generated repository totals and recent activity in the [live catalog](#repository-catalog) remain available independently of these image providers. The native [GitHub contribution history](https://github.com/jxxzy) and [repositories](https://github.com/jxxzy?tab=repositories) remain the source of record.
 
 ## Current focus
 
