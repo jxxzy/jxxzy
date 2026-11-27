@@ -45,14 +45,22 @@ def normalize(body, depth=0):
         tag = node.tag.rsplit("}", 1)[-1]
         if tag in ("script", "foreignObject", "iframe", "audio", "video"):
             raise ValueError("unsafe SVG element")
-        for key, value in node.attrib.items():
+        for key, value in list(node.attrib.items()):
             name = key.rsplit("}", 1)[-1].lower()
             if name.startswith("on"):
                 raise ValueError("unsafe SVG event handler")
             if name in ("href", "src") and not value.startswith("#"):
+                if tag == "a" and value.startswith("https://"):
+                    # README already has the intended link; strip nested external link.
+                    del node.attrib[key]
+                    continue
                 if tag == "image" and value.startswith("data:image/svg+xml;base64,"):
                     embedded = base64.b64decode(value.split(",", 1)[1], validate=True)
                     safe = normalize(embedded, depth+1)
+                    node.set(key, "data:image/svg+xml;base64," + base64.b64encode(safe).decode("ascii"))
+                elif tag == "image" and re.match(r"data:image/svg\+xml(?:;utf8|;charset=utf-8)?,", value, re.I):
+                    from urllib.parse import unquote_to_bytes
+                    safe = normalize(unquote_to_bytes(value.split(",", 1)[1]), depth+1)
                     node.set(key, "data:image/svg+xml;base64," + base64.b64encode(safe).decode("ascii"))
                 else:
                     raise ValueError("external SVG reference")
@@ -121,6 +129,43 @@ def render_activity(calendar):
     first, last = days[0]["date"], days[-1]["date"]
     return normalize(f'<svg xmlns="{NS}" width="900" height="240" viewBox="0 0 900 240"><title>GitHub contribution activity graph</title><rect x="1" y="1" width="898" height="238" rx="12" fill="#1a1b26" stroke="#394b70"/><text x="30" y="32" font-family="sans-serif" font-size="20" fill="#7aa2f7" font-weight="bold">JXXZY / GitHub contribution activity</text><text x="30" y="54" font-family="sans-serif" font-size="13" fill="#c0caf5">{total} visible contributions · weekly totals · GitHub GraphQL</text><path d="M46 69 H854 M46 125 H854 M46 181 H854" stroke="#394b70" fill="none"/><polygon points="{area}" fill="#7aa2f7" opacity=".18"/><polyline points="{line}" stroke="#7aa2f7" stroke-width="2" fill="none" stroke-linejoin="round"/><text x="46" y="202" fill="#c0caf5" font-family="sans-serif" font-size="12">{first}</text><text x="854" y="202" text-anchor="end" fill="#c0caf5" font-family="sans-serif" font-size="12">{last}</text><text x="30" y="225" fill="#a9b1d6" font-family="sans-serif" font-size="11">Source: official GitHub contribution calendar · activity visible to the workflow token.</text></svg>'.encode())
 
+def native_badge(item):
+    from update_profile import request_json, fetch_public
+    headers = {"Accept": "application/vnd.github+json", "X-GitHub-Api-Version": "2022-11-28", "User-Agent": "jxxzy-profile-cache"}
+    if os.environ.get("GH_TOKEN"):
+        headers["Authorization"] = "Bearer " + os.environ["GH_TOKEN"]
+    key = item["name"]
+    if key == "badge-5":
+        count = request_json("https://api.github.com/repos/jxxzy/HyperBoostX", headers)["stargazers_count"]
+        label, color, height = "stars", "#22d3ee", 20
+    elif key == "badge-7":
+        count = request_json("https://api.github.com/users/jxxzy", headers)["followers"]
+        label, color, height = "FOLLOWERS", "#0891b2", 28
+    elif key == "badge-8":
+        count = sum(int(repo["stargazers_count"]) for repo in fetch_public("jxxzy", "users"))
+        label, color, height = "STARS", "#7c3aed", 28
+    else:
+        raise ValueError("not a supported native badge")
+    if not isinstance(count, int) or count < 0:
+        raise ValueError("invalid badge count")
+    logo = ""
+    if height == 28:
+        path = CACHE / "badge-1.svg"
+        if path.exists():
+            svg = ET.fromstring(normalize(path.read_bytes()))
+            for node in svg.iter():
+                if node.tag == "{" + NS + "}image" and node.get("href", "").startswith("data:image/svg+xml;base64,"):
+                    logo = f'<image x="9" y="7" width="14" height="14" href="{node.get("href")}"/>'
+                    break
+    offset = 23 if logo else 0
+    left = len(label)*8 + 20 + offset
+    right = max(32, len(str(count))*8+20)
+    width = left + right
+    font = 12 if height == 20 else 11
+    y = height/2 + 4
+    ink = "#13212a" if key == "badge-5" else "#fff"
+    return normalize(f'<svg xmlns="{NS}" width="{width}" height="{height}" viewBox="0 0 {width} {height}" role="img"><title>{label}: {count} (GitHub REST API)</title><rect width="{left}" height="{height}" fill="#555"/><rect x="{left}" width="{right}" height="{height}" fill="{color}"/>{logo}<g font-family="Verdana,sans-serif" font-size="{font}" text-anchor="middle"><text x="{(left+offset)/2}" y="{y}" fill="#fff">{label}</text><text x="{left+right/2}" y="{y}" fill="{ink}">{count}</text></g></svg>'.encode())
+
 def read_state():
     path = CACHE / "status.json"
     return json.loads(path.read_text()) if path.exists() else {}
@@ -141,6 +186,11 @@ def refresh_one(item, previous):
                 native = native_activity()
             except Exception as error:
                 print("::warning::native activity: " + type(error).__name__ + " " + str(error)[:100])
+        elif item["name"] in ("badge-5", "badge-7", "badge-8"):
+            try:
+                native = native_badge(item)
+            except Exception as error:
+                print("::warning::native badge: " + type(error).__name__ + " " + str(error)[:100])
         if native is not None:
             body, status = native, "verified-github-native"
         elif previous.get(item["name"]) in ("verified", "last-known-good", "verified-github-native") and path.exists():
@@ -184,6 +234,7 @@ def main():
         embedded = base64.b64encode(valid).decode()
         logo = f'<svg xmlns="{NS}" width="10" height="20"><image href="data:image/svg+xml;base64,{embedded}"/></svg>'.encode()
         assert b"data:image/svg+xml;base64," in normalize(logo)
+        assert b"https://example.com" not in normalize(valid.replace(b"<text>OK</text>", b'<a href="https://example.com"><text>OK</text></a>'))
         sample = {"totalContributions": 3, "weeks": [{"contributionDays": [{"date": "2026-01-01", "contributionCount": 3}]}]}
         assert b"3 visible contributions" in render_activity(sample)
         print("Provider cache self-tests passed")

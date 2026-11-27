@@ -407,7 +407,7 @@ Projects differ in maturity. A prototype is not a finished product; a passing un
 
 </details>
 
-Contribution cards, skill icons and Shields badges are refreshed from their original providers and stored locally when valid. If a provider fails, the last verified image is retained; if no valid snapshot exists, an explicitly labeled unavailable card is shown. The profile-view counter and native GitHub workflow badges remain live. [Provider health](assets/provider-cache/status.json). Language distribution is not a proficiency score. The API-generated repository totals and recent activity in the [live catalog](#repository-catalog) remain available independently of these image providers. The native [GitHub contribution history](https://github.com/jxxzy) and [repositories](https://github.com/jxxzy?tab=repositories) remain the source of record.
+Contribution cards, skill icons and Shields badges are refreshed from their original providers and stored locally when valid. If a provider fails, official GitHub data is used where available; otherwise the last verified image is retained. If no verified data exists, an explicitly labeled fallback is shown. The profile-view counter and native GitHub workflow badges remain live. [Provider health](assets/provider-cache/status.json). Language distribution is not a proficiency score. The API-generated repository totals and recent activity in the [live catalog](#repository-catalog) remain available independently of these image providers. The native [GitHub contribution history](https://github.com/jxxzy) and [repositories](https://github.com/jxxzy?tab=repositories) remain the source of record.
 
 ## Current focus
 
