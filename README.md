@@ -1,8 +1,12 @@
 # Daslan Josua Valentino Siahaan
 
+![JXXZY developer portfolio](assets/hero.svg)
+
 **JXXZY · Software Developer · NEXORAID Founder · Digital Creator**
 
 Windows · Web · Automation · GIS · Music
+
+![Animated engineering terminal](assets/terminal.svg)
 
 [GitHub](https://github.com/jxxzy) · [NEXORAID](https://github.com/NEXORAID-ID) · [Portfolio](https://jxxzy.github.io/) · Indonesia
 
@@ -23,6 +27,8 @@ My Windows optimization work started from a practical problem: many gaming commu
 | Creative work | DJ performance, music production, event and artist websites |
 
 > Build with purpose. Test with evidence. Ship responsibly. Keep improving.
+
+![Animated signal divider](assets/signal.svg)
 
 ## Flagship projects
 
@@ -52,6 +58,8 @@ My Windows optimization work started from a practical problem: many gaming commu
 | **Geospatial skeleton** | Geospatial web learning project with a published Pages link. | [Source](https://github.com/jxxzy/skeleton-geospasial-gis) · [Demo](https://jxxzy.github.io/skeleton-geospasial-gis/) |
 | **WA-BOT-MD** | WhatsApp multi-device bot exploration. | [Source](https://github.com/jxxzy/WA-BOT-MD) |
 | **webhook** | Go webhook/backend integration experiment. | [Source](https://github.com/jxxzy/webhook) |
+
+![Animated signal divider](assets/signal.svg)
 
 ## NEXORAID ecosystem
 
@@ -219,7 +227,11 @@ Problem -> Requirements -> Prototype -> Implementation
 
 Projects differ in maturity. A prototype is not a finished product; a passing unit test is not proof that every requirement is verified.
 
+![Animated signal divider](assets/signal.svg)
+
 ## GitHub analytics
+
+![Public repository analytics](assets/profile-analytics.svg)
 
 Repository counts, stars, and recent activity are available as native Markdown in the [repository catalog](#repository-catalog).
 
@@ -228,19 +240,6 @@ Repository counts, stars, and recent activity are available as native Markdown i
 [Contribution history](https://github.com/jxxzy) · [Repositories and stars](https://github.com/jxxzy?tab=repositories) · [Followers](https://github.com/jxxzy?tab=followers) · [Following](https://github.com/jxxzy?tab=following)
 
 The native GitHub profile is the source of record for contribution activity. Repository counts, stars and language summaries above are generated locally from public API metadata, not from third-party cards that can return errors or stale images.
-
-<details>
-<summary>Optional animated portfolio visuals and analytics chart</summary>
-
-![JXXZY developer portfolio](assets/hero.svg)
-
-![Engineering focus terminal](assets/terminal.svg)
-
-![Public repository analytics](assets/profile-analytics.svg)
-
-![JXXZY music branding](assets/studio.svg)
-
-</details>
 
 ## Current focus
 
@@ -252,10 +251,12 @@ The native GitHub profile is the source of record for contribution activity. Rep
 
 ## Connect
 
+![Animated JXXZY music equalizer](assets/studio.svg)
+
 [GitHub](https://github.com/jxxzy) · [Instagram](https://instagram.com/jxxzyshn) · [TikTok](https://www.tiktok.com/@mr.4nony) · [YouTube](https://www.youtube.com/@jxxzymix) · [Discord](https://discord.gg/sBUA95rnFN)
 
 Open to discussing software projects, collaboration, automation and creative work.
 
 **JXXZY — FUN, FLY, ENJOY.**
 
-<sub>Core profile content uses native GitHub Markdown. Optional visuals are local SVG assets (decorative, not live system telemetry). See each project's own README, release status and license for authoritative details.</sub>
+<sub>Core profile content uses native GitHub Markdown. Visible animated visuals are local SVG assets (decorative, not live system telemetry). See each project's own README, release status and license for authoritative details.</sub>

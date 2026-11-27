@@ -184,6 +184,15 @@ def validate_assets():
             raise ValueError(f"Missing local documentation: {link}")
     if not readme.startswith("# ") or "<div" in readme or "<details open" in readme:
         raise ValueError("Profile must use a native heading and collapsed optional sections")
+    # The profile intentionally shows its animated assets without requiring a click.
+    visible = re.sub(r"<details\b[^>]*>[\s\S]*?</details>", "", readme)
+    animated = {"assets/hero.svg", "assets/terminal.svg", "assets/signal.svg", "assets/studio.svg"}
+    for asset in sorted(animated):
+        if not re.search(r"!\[[^\]]*\]\(" + re.escape(asset) + r"\)", visible):
+            raise ValueError(f"Animated asset hidden or missing from profile: {asset}")
+        root = ET.parse(ROOT / asset).getroot()
+        if not any(node.tag.rsplit("}", 1)[-1] in ("animate", "animateTransform", "animateMotion") for node in root.iter()):
+            raise ValueError(f"Animation missing from {asset}")
     if not assets:
         raise ValueError("No local SVG assets referenced")
     for asset in sorted(assets):
