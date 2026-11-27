@@ -1,6 +1,7 @@
 <svg xmlns="http://www.w3.org/2000/svg" width="900" height="350" viewBox="0 0 900 350" role="img">
 <title>JXXZY public repository analytics</title>
 <desc>GitHub API public repository counts, stars, forks and most common primary languages.</desc>
+<style>text[fill="#64748b"]{fill:#475569}@media (prefers-color-scheme: dark){text[fill="#64748b"]{fill:#cbd5e1}}</style>
 <g font-family="system-ui, sans-serif">
 <text x="28" y="36" font-size="21" font-weight="700" fill="#64748b">JXXZY / PUBLIC REPOSITORY ANALYTICS</text>
 <rect x="28" y="55" width="199" height="78" rx="10" fill="none" stroke="#64748b" stroke-opacity=".45"/>

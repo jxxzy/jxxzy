@@ -8,10 +8,10 @@
 
 <img src="assets/terminal.svg" alt="Animated terminal: Windows optimization, full-stack development, automation, GIS and music" width="100%" />
 
-[![GitHub](https://img.shields.io/badge/GitHub-%40jxxzy-111827?style=for-the-badge&logo=github&logoColor=white)](https://github.com/jxxzy)
-[![NEXORAID](https://img.shields.io/badge/NEXORAID-Organization-4338ca?style=for-the-badge&logo=github&logoColor=white)](https://github.com/NEXORAID-ID)
-[![Portfolio](https://img.shields.io/badge/Portfolio-Website-0891b2?style=for-the-badge&logo=firefoxbrowser&logoColor=white)](https://jxxzy.github.io/)
-[![Location](https://img.shields.io/badge/Location-Indonesia-be123c?style=for-the-badge)](https://github.com/jxxzy)
+[![GitHub](assets/provider-cache/badge-1.svg)](https://github.com/jxxzy)
+[![NEXORAID](assets/provider-cache/badge-2.svg)](https://github.com/NEXORAID-ID)
+[![Portfolio](assets/provider-cache/badge-3.svg)](https://jxxzy.github.io/)
+[![Location](assets/provider-cache/badge-4.svg)](https://github.com/jxxzy)
 
 [About](#about-me) · [Flagship](#flagship-projects) · [Organization](#nexoraid-ecosystem) · [Live catalog](#repository-catalog) · [Stack](#technology-stack) · [Activity](#github-analytics) · [Contact](#connect)
 
@@ -39,7 +39,7 @@ My Windows optimization work started from a practical problem: many gaming commu
 
 ### HyperBoostX — Windows performance & control center
 
-[![Stars](https://img.shields.io/github/stars/jxxzy/HyperBoostX?style=flat-square&color=22d3ee)](https://github.com/jxxzy/HyperBoostX/stargazers) [![Last commit](https://img.shields.io/github/last-commit/jxxzy/HyperBoostX?style=flat-square&color=8b5cf6)](https://github.com/jxxzy/HyperBoostX/commits)
+[![Stars](assets/provider-cache/badge-5.svg)](https://github.com/jxxzy/HyperBoostX/stargazers) [![Last commit](assets/provider-cache/badge-6.svg)](https://github.com/jxxzy/HyperBoostX/commits)
 
 | Track | Scope | Status |
 | :--- | :--- | :--- |
@@ -346,11 +346,11 @@ Technologies used or explored across personal, team and research projects. This 
 
 <div align="center">
 
-<img src="https://skillicons.dev/icons?i=cs,dotnet,js,ts,go,py,php,java,html,css,dart,flutter&perline=6&theme=dark" alt="Languages and platforms: C#, .NET, JavaScript, TypeScript, Go, Python, PHP, Java, HTML, CSS, Dart, Flutter" />
+<img src="assets/provider-cache/skills-languages.svg" alt="Languages and platforms: C#, .NET, JavaScript, TypeScript, Go, Python, PHP, Java, HTML, CSS, Dart, Flutter" />
 
-<img src="https://skillicons.dev/icons?i=react,nextjs,vite,tailwind,bootstrap,nodejs,express,laravel,mysql,sqlite,git,github&perline=6&theme=dark" alt="Frameworks and data: React, Next.js, Vite, Tailwind, Bootstrap, Node.js, Express, Laravel, MySQL, SQLite, Git, GitHub" />
+<img src="assets/provider-cache/skills-frameworks.svg" alt="Frameworks and data: React, Next.js, Vite, Tailwind, Bootstrap, Node.js, Express, Laravel, MySQL, SQLite, Git, GitHub" />
 
-<img src="https://skillicons.dev/icons?i=githubactions,docker,nginx,linux,windows,powershell,vscode,visualstudio,postman,figma&perline=5&theme=dark" alt="Engineering tools: GitHub Actions, Docker, Nginx, Linux, Windows, PowerShell, VS Code, Visual Studio, Postman, Figma" />
+<img src="assets/provider-cache/skills-tools.svg" alt="Engineering tools: GitHub Actions, Docker, Nginx, Linux, Windows, PowerShell, VS Code, Visual Studio, Postman, Figma" />
 
 </div>
 
@@ -390,17 +390,17 @@ Projects differ in maturity. A prototype is not a finished product; a passing un
 
 <div align="center">
 
-<a href="https://github.com/jxxzy"><img src="https://github-readme-stats.vercel.app/api?username=jxxzy&amp;show_icons=true&amp;theme=tokyonight&amp;hide_border=true&amp;include_all_commits=true" alt="GitHub public activity statistics" width="48%" /></a>
-<a href="https://github.com/jxxzy"><img src="https://streak-stats.demolab.com?user=jxxzy&amp;theme=tokyonight&amp;hide_border=true" alt="GitHub contribution streak" width="48%" /></a>
+<a href="https://github.com/jxxzy"><img src="assets/provider-cache/github-stats.svg" alt="GitHub public activity statistics" width="48%" /></a>
+<a href="https://github.com/jxxzy"><img src="assets/provider-cache/contribution-streak.svg" alt="GitHub contribution streak" width="48%" /></a>
 
-<img src="https://github-readme-stats.vercel.app/api/top-langs/?username=jxxzy&amp;theme=tokyonight&amp;hide_border=true&amp;layout=compact&amp;langs_count=10" alt="GitHub repository language breakdown" width="48%" />
-<img src="https://github-profile-summary-cards.vercel.app/api/cards/repos-per-language?username=jxxzy&amp;theme=tokyonight" alt="Repositories per language" width="48%" />
+<img src="assets/provider-cache/top-languages.svg" alt="GitHub repository language breakdown" width="48%" />
+<img src="assets/provider-cache/repos-per-language.svg" alt="Repositories per language" width="48%" />
 
-<img src="https://github-profile-summary-cards.vercel.app/api/cards/profile-details?username=jxxzy&amp;theme=tokyonight" alt="GitHub contribution summary" width="100%" />
-<img src="https://github-readme-activity-graph.vercel.app/graph?username=jxxzy&amp;theme=tokyo-night&amp;hide_border=true&amp;area=true" alt="GitHub contribution activity graph" width="100%" />
+<img src="assets/provider-cache/profile-summary.svg" alt="GitHub contribution summary" width="100%" />
+<img src="assets/provider-cache/activity-graph.svg" alt="GitHub contribution activity graph" width="100%" />
 
-[![Followers](https://img.shields.io/github/followers/jxxzy?style=for-the-badge&amp;logo=github&amp;color=0891b2)](https://github.com/jxxzy?tab=followers)
-[![Stars](https://img.shields.io/github/stars/jxxzy?style=for-the-badge&amp;logo=github&amp;color=7c3aed)](https://github.com/jxxzy?tab=repositories)
+[![Followers](assets/provider-cache/badge-7.svg)](https://github.com/jxxzy?tab=followers)
+[![Stars](assets/provider-cache/badge-8.svg)](https://github.com/jxxzy?tab=repositories)
 [![Profile visits](https://komarev.com/ghpvc/?username=jxxzy&amp;style=for-the-badge&amp;color=0891b2&amp;label=Profile+Views)](https://github.com/jxxzy)
 
 </div>
@@ -423,11 +423,11 @@ Contribution cards, skill icons and Shields badges are refreshed from their orig
 
 <img src="assets/studio.svg" alt="Animated sound equalizer — JXXZY, Fun Fly Enjoy" width="100%" />
 
-[![GitHub](https://img.shields.io/badge/GitHub-Follow-181717?style=for-the-badge&logo=github&logoColor=white)](https://github.com/jxxzy)
-[![Instagram](https://img.shields.io/badge/Instagram-%40jxxzyshn-be185d?style=for-the-badge&logo=instagram&logoColor=white)](https://instagram.com/jxxzyshn)
-[![TikTok](https://img.shields.io/badge/TikTok-%40mr.4nony-111827?style=for-the-badge&logo=tiktok&logoColor=white)](https://www.tiktok.com/@mr.4nony)
-[![YouTube](https://img.shields.io/badge/YouTube-%40jxxzymix-b91c1c?style=for-the-badge&logo=youtube&logoColor=white)](https://www.youtube.com/@jxxzymix)
-[![Discord](https://img.shields.io/badge/Discord-Community-5865F2?style=for-the-badge&logo=discord&logoColor=white)](https://discord.gg/sBUA95rnFN)
+[![GitHub](assets/provider-cache/badge-9.svg)](https://github.com/jxxzy)
+[![Instagram](assets/provider-cache/badge-10.svg)](https://instagram.com/jxxzyshn)
+[![TikTok](assets/provider-cache/badge-11.svg)](https://www.tiktok.com/@mr.4nony)
+[![YouTube](assets/provider-cache/badge-12.svg)](https://www.youtube.com/@jxxzymix)
+[![Discord](assets/provider-cache/badge-13.svg)](https://discord.gg/sBUA95rnFN)
 
 Open to discussing software projects, collaboration, automation and creative work.
 
