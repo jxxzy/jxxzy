@@ -107,6 +107,21 @@ A collaborative Flutter/Dart application for GPS coordinates, elevation, offline
 
 Public metadata from the GitHub REST API. Non-fork does not imply original authorship.
 
+**Public repository stars:** 6 personal · 1 NEXORAID (including forks).
+
+### Recently pushed public projects
+
+| Repository | Language | Last push (UTC) | Stars |
+| :--- | :--- | :--- | ---: |
+| [nexoraid-id.github.io](https://github.com/NEXORAID-ID/nexoraid-id.github.io) | JavaScript | 2026-11-27 | 0 |
+| [HyperBoostX](https://github.com/jxxzy/HyperBoostX) | C\# | 2026-11-27 | 1 |
+| [netpro-2026](https://github.com/jxxzy/netpro-2026) | Python | 2026-11-26 | 0 |
+| [proposal-proyek3](https://github.com/jxxzy/proposal-proyek3) | CSS | 2026-11-20 | 0 |
+| [gcfbackend](https://github.com/jxxzy/gcfbackend) | Go | 2026-11-20 | 0 |
+| [GIS-CHAPTER-5](https://github.com/jxxzy/GIS-CHAPTER-5) | JavaScript | 2026-11-19 | 0 |
+| [chapter1](https://github.com/jxxzy/chapter1) | JavaScript | 2026-11-19 | 0 |
+| [open-layer](https://github.com/jxxzy/open-layer) | JavaScript | 2026-11-19 | 0 |
+
 <details open>
 <summary><b>Personal repositories (51)</b></summary>
 
@@ -137,7 +152,7 @@ Public metadata from the GitHub REST API. Non-fork does not imply original autho
 | [GIS-GOLANG](https://github.com/jxxzy/GIS-GOLANG) | Go | Non-fork | 0 | 2024-02-19 |
 | [gis7](https://github.com/jxxzy/gis7) | — | Non-fork | 0 | 2023-11-10 |
 | [go-ethereum](https://github.com/jxxzy/go-ethereum) | — | Fork | 0 | 2024-02-20 |
-| [HyperBoostX](https://github.com/jxxzy/HyperBoostX) | C\# | Non-fork | 1 | 2026-11-23 |
+| [HyperBoostX](https://github.com/jxxzy/HyperBoostX) | C\# | Non-fork | 1 | 2026-11-27 |
 | [jsshn12](https://github.com/jxxzy/jsshn12) | — | Non-fork | 0 | 2022-06-30 |
 | [jxxzy](https://github.com/jxxzy/jxxzy) | Python | Non-fork | 1 | — |
 | [Jxxzy.github.io](https://github.com/jxxzy/Jxxzy.github.io) | HTML | Non-fork | 1 | 2026-11-19 |
@@ -174,7 +189,7 @@ Public metadata from the GitHub REST API. Non-fork does not imply original autho
 | [hypehostx](https://github.com/NEXORAID-ID/hypehostx) | HTML | Non-fork | 0 | 2026-11-15 |
 | [hyperboostx-v3](https://github.com/NEXORAID-ID/hyperboostx-v3) | C\# | Non-fork | 0 | 2026-11-16 |
 | [hyperboostx-v3-prototype](https://github.com/NEXORAID-ID/hyperboostx-v3-prototype) | HTML | Non-fork | 1 | 2026-11-17 |
-| [nexoraid-id.github.io](https://github.com/NEXORAID-ID/nexoraid-id.github.io) | JavaScript | Non-fork | 0 | 2026-11-26 |
+| [nexoraid-id.github.io](https://github.com/NEXORAID-ID/nexoraid-id.github.io) | JavaScript | Non-fork | 0 | 2026-11-27 |
 
 </details>
 
