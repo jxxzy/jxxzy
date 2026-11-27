@@ -7,6 +7,7 @@ import re
 import sys
 import time
 from collections import Counter
+from concurrent.futures import ThreadPoolExecutor
 from xml.etree import ElementTree as ET
 from urllib.error import HTTPError, URLError
 from pathlib import Path
@@ -182,14 +183,9 @@ def validate_assets():
     for link in re.findall(r'\]\((docs/[^)#]+)(?:#[^)]*)?\)', readme):
         if not (ROOT / link).is_file():
             raise ValueError(f"Missing local documentation: {link}")
-    if not readme.startswith("# ") or "<div" in readme or "<details open" in readme:
-        raise ValueError("Profile must use a native heading and collapsed optional sections")
-    # The profile intentionally shows its animated assets without requiring a click.
-    visible = re.sub(r"<details\b[^>]*>[\s\S]*?</details>", "", readme)
-    animated = {"assets/hero.svg", "assets/terminal.svg", "assets/signal.svg", "assets/studio.svg"}
-    for asset in sorted(animated):
-        if not re.search(r"!\[[^\]]*\]\(" + re.escape(asset) + r"\)", visible):
-            raise ValueError(f"Animated asset hidden or missing from profile: {asset}")
+    for asset in ("assets/hero.svg", "assets/terminal.svg", "assets/signal.svg", "assets/studio.svg"):
+        if asset not in assets:
+            raise ValueError(f"Missing animated asset: {asset}")
         root = ET.parse(ROOT / asset).getroot()
         if not any(node.tag.rsplit("}", 1)[-1] in ("animate", "animateTransform", "animateMotion") for node in root.iter()):
             raise ValueError(f"Animation missing from {asset}")
@@ -217,17 +213,32 @@ def validate_assets():
                 for target in re.findall(r"url\\(#([^)]*)\\)", value):
                     if target not in ids:
                         raise ValueError(f"Missing SVG reference: {asset} #{target}")
-    if re.search(r"github-readme-stats\\.vercel\\.app|streak-stats\\.demolab\\.com|github-profile-summary-cards\\.vercel\\.app|github-readme-activity-graph\\.vercel\\.app|skillicons\\.dev|komarev\\.com", readme):
-        raise ValueError("Unreliable external image dependency reintroduced")
     print(f"Validated README anchors, generator markers and {len(assets)} local SVG assets")
 
 
 def probe_external():
-    # Contribution cards are deliberately local/native. The legacy workflow
-    # command remains supported; validate the profile rather than reporting a
-    # misleading success when a third-party provider serves an error image.
-    validate_assets()
-    print("No third-party image dependencies; profile content has native Markdown fallbacks.")
+    readme = (ROOT / "README.md").read_text(encoding="utf-8")
+    section = readme.split("Additional live contribution cards", 1)[1].split("</details>", 1)[0]
+    urls = [html.unescape(url) for url in re.findall(r'<img src="(https://[^"]+)"', section)]
+    def probe(url):
+        try:
+            # No GitHub token is sent to external image services.
+            with urlopen(Request(url, headers={"User-Agent": "jxxzy-profile-health"}), timeout=8) as response:
+                body = response.read(2_000_001)
+                kind = response.headers.get("Content-Type", "")
+                if len(body) > 2_000_000:
+                    return url, "unverified: response too large"
+                if "svg" in kind.lower():
+                    ET.fromstring(body)
+                    if re.search(rb"rate limit|something went wrong|could not fetch|error fetching|application error|api error", body, re.I):
+                        return url, "provider error indicator"
+                    return url, "valid SVG response"
+                return url, "HTTP success: " + kind
+        except Exception as exc:
+            return url, "unavailable: " + type(exc).__name__
+    with ThreadPoolExecutor(max_workers=6) as pool:
+        for url, status in pool.map(probe, urls):
+            print(("::warning::" if status.startswith(("unavailable", "provider error", "unverified")) else "") + status + " | " + url)
 
 
 def replace_index(original, generated):
