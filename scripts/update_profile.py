@@ -141,6 +141,7 @@ def analytics_svg(personal, organization):
     out = ['<svg xmlns="http://www.w3.org/2000/svg" width="900" height="350" viewBox="0 0 900 350" role="img">',
            '<title>JXXZY public repository analytics</title>',
            '<desc>GitHub API public repository counts, stars, forks and most common primary languages.</desc>',
+           '<style>text[fill="#64748b"]{fill:#475569}@media (prefers-color-scheme: dark){text[fill="#64748b"]{fill:#cbd5e1}}</style>',
            '<g font-family="system-ui, sans-serif">',
            '<text x="28" y="36" font-size="21" font-weight="700" fill="#64748b">JXXZY / PUBLIC REPOSITORY ANALYTICS</text>']
     for index, (label, value) in enumerate(stats):
@@ -219,6 +220,9 @@ def validate_assets():
 def probe_external():
     readme = (ROOT / "README.md").read_text(encoding="utf-8")
     section = readme.split("Additional live contribution cards", 1)[1].split("</details>", 1)[0]
+    if not re.search(r'<img src="https://', section):
+        print("Contribution cards now use the validated local provider cache; see assets/provider-cache/status.json")
+        return
     urls = [html.unescape(url) for url in re.findall(r'<img src="(https://[^"]+)"', section)]
     def probe(url):
         try:

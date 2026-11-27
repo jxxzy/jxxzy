@@ -1,0 +1,134 @@
+[
+  {
+    "name": "skills-languages",
+    "url": "https://skillicons.dev/icons?i=cs,dotnet,js,ts,go,py,php,java,html,css,dart,flutter&perline=6&theme=dark",
+    "label": "Languages and platforms: C#, .NET, JavaScript, TypeScript, Go, Python, PHP, Java, HTML, CSS, Dart, Flutter",
+    "kind": "skills"
+  },
+  {
+    "name": "skills-frameworks",
+    "url": "https://skillicons.dev/icons?i=react,nextjs,vite,tailwind,bootstrap,nodejs,express,laravel,mysql,sqlite,git,github&perline=6&theme=dark",
+    "label": "Frameworks and data: React, Next.js, Vite, Tailwind, Bootstrap, Node.js, Express, Laravel, MySQL, SQLite, Git, GitHub",
+    "kind": "skills"
+  },
+  {
+    "name": "skills-tools",
+    "url": "https://skillicons.dev/icons?i=githubactions,docker,nginx,linux,windows,powershell,vscode,visualstudio,postman,figma&perline=5&theme=dark",
+    "label": "Engineering tools: GitHub Actions, Docker, Nginx, Linux, Windows, PowerShell, VS Code, Visual Studio, Postman, Figma",
+    "kind": "skills"
+  },
+  {
+    "name": "github-stats",
+    "url": "https://github-readme-stats.vercel.app/api?username=jxxzy&show_icons=true&theme=tokyonight&hide_border=true&include_all_commits=true",
+    "label": "GitHub public activity statistics",
+    "kind": "card"
+  },
+  {
+    "name": "contribution-streak",
+    "url": "https://streak-stats.demolab.com?user=jxxzy&theme=tokyonight&hide_border=true",
+    "label": "GitHub contribution streak",
+    "kind": "card"
+  },
+  {
+    "name": "top-languages",
+    "url": "https://github-readme-stats.vercel.app/api/top-langs/?username=jxxzy&theme=tokyonight&hide_border=true&layout=compact&langs_count=10",
+    "label": "GitHub repository language breakdown",
+    "kind": "card"
+  },
+  {
+    "name": "repos-per-language",
+    "url": "https://github-profile-summary-cards.vercel.app/api/cards/repos-per-language?username=jxxzy&theme=tokyonight",
+    "label": "Repositories per language",
+    "kind": "card"
+  },
+  {
+    "name": "profile-summary",
+    "url": "https://github-profile-summary-cards.vercel.app/api/cards/profile-details?username=jxxzy&theme=tokyonight",
+    "label": "GitHub contribution summary",
+    "kind": "card"
+  },
+  {
+    "name": "activity-graph",
+    "url": "https://github-readme-activity-graph.vercel.app/graph?username=jxxzy&theme=tokyo-night&hide_border=true&area=true",
+    "label": "GitHub contribution activity graph",
+    "kind": "card"
+  },
+  {
+    "name": "badge-1",
+    "url": "https://img.shields.io/badge/GitHub-%40jxxzy-111827?style=for-the-badge&logo=github&logoColor=white",
+    "label": "GitHub",
+    "kind": "badge"
+  },
+  {
+    "name": "badge-2",
+    "url": "https://img.shields.io/badge/NEXORAID-Organization-4338ca?style=for-the-badge&logo=github&logoColor=white",
+    "label": "NEXORAID",
+    "kind": "badge"
+  },
+  {
+    "name": "badge-3",
+    "url": "https://img.shields.io/badge/Portfolio-Website-0891b2?style=for-the-badge&logo=firefoxbrowser&logoColor=white",
+    "label": "Portfolio",
+    "kind": "badge"
+  },
+  {
+    "name": "badge-4",
+    "url": "https://img.shields.io/badge/Location-Indonesia-be123c?style=for-the-badge",
+    "label": "Location",
+    "kind": "badge"
+  },
+  {
+    "name": "badge-5",
+    "url": "https://img.shields.io/github/stars/jxxzy/HyperBoostX?style=flat-square&color=22d3ee",
+    "label": "Stars",
+    "kind": "badge"
+  },
+  {
+    "name": "badge-6",
+    "url": "https://img.shields.io/github/last-commit/jxxzy/HyperBoostX?style=flat-square&color=8b5cf6",
+    "label": "Last commit",
+    "kind": "badge"
+  },
+  {
+    "name": "badge-7",
+    "url": "https://img.shields.io/github/followers/jxxzy?style=for-the-badge&logo=github&color=0891b2",
+    "label": "Followers",
+    "kind": "badge"
+  },
+  {
+    "name": "badge-8",
+    "url": "https://img.shields.io/github/stars/jxxzy?style=for-the-badge&logo=github&color=7c3aed",
+    "label": "Stars",
+    "kind": "badge"
+  },
+  {
+    "name": "badge-9",
+    "url": "https://img.shields.io/badge/GitHub-Follow-181717?style=for-the-badge&logo=github&logoColor=white",
+    "label": "GitHub",
+    "kind": "badge"
+  },
+  {
+    "name": "badge-10",
+    "url": "https://img.shields.io/badge/Instagram-%40jxxzyshn-be185d?style=for-the-badge&logo=instagram&logoColor=white",
+    "label": "Instagram",
+    "kind": "badge"
+  },
+  {
+    "name": "badge-11",
+    "url": "https://img.shields.io/badge/TikTok-%40mr.4nony-111827?style=for-the-badge&logo=tiktok&logoColor=white",
+    "label": "TikTok",
+    "kind": "badge"
+  },
+  {
+    "name": "badge-12",
+    "url": "https://img.shields.io/badge/YouTube-%40jxxzymix-b91c1c?style=for-the-badge&logo=youtube&logoColor=white",
+    "label": "YouTube",
+    "kind": "badge"
+  },
+  {
+    "name": "badge-13",
+    "url": "https://img.shields.io/badge/Discord-Community-5865F2?style=for-the-badge&logo=discord&logoColor=white",
+    "label": "Discord",
+    "kind": "badge"
+  }
+]
