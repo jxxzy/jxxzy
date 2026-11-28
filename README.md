@@ -126,7 +126,7 @@ Counts public non-fork, non-archived repositories, excluding this profile. Not a
 
 | Repository | Language | Last push (UTC) | Stars |
 | :--- | :--- | :--- | ---: |
-| [nexoraid-id.github.io](https://github.com/NEXORAID-ID/nexoraid-id.github.io) | JavaScript | 2026-11-27 | 0 |
+| [nexoraid-id.github.io](https://github.com/NEXORAID-ID/nexoraid-id.github.io) | JavaScript | 2026-11-28 | 0 |
 | [HyperBoostX](https://github.com/jxxzy/HyperBoostX) | C\# | 2026-11-27 | 1 |
 | [netpro-2026](https://github.com/jxxzy/netpro-2026) | Python | 2026-11-26 | 0 |
 | [proposal-proyek3](https://github.com/jxxzy/proposal-proyek3) | CSS | 2026-11-20 | 0 |
@@ -202,7 +202,7 @@ Counts public non-fork, non-archived repositories, excluding this profile. Not a
 | [hypehostx](https://github.com/NEXORAID-ID/hypehostx) | HTML | Non-fork | 0 | 2026-11-15 |
 | [hyperboostx-v3](https://github.com/NEXORAID-ID/hyperboostx-v3) | C\# | Non-fork | 0 | 2026-11-16 |
 | [hyperboostx-v3-prototype](https://github.com/NEXORAID-ID/hyperboostx-v3-prototype) | HTML | Non-fork | 1 | 2026-11-17 |
-| [nexoraid-id.github.io](https://github.com/NEXORAID-ID/nexoraid-id.github.io) | JavaScript | Non-fork | 0 | 2026-11-27 |
+| [nexoraid-id.github.io](https://github.com/NEXORAID-ID/nexoraid-id.github.io) | JavaScript | Non-fork | 0 | 2026-11-28 |
 
 </details>
 
